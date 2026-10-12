@@ -151,6 +151,22 @@
       <input id="bookEmail" name="email" type="email" autocomplete="email" required placeholder="La tua email">
      </div>
      <div class="compact-fields">
+      <label class="sr-only" for="leadType">Tipo di lista</label>
+      <select id="leadType" name="tipo_lista" required aria-label="Tipo di lista">
+       <option value="">Seleziona il tipo di lista</option><option>Business B2B - aziende e professionisti</option><option>Residenziale B2C - privati</option><option>Entrambe / da valutare</option>
+      </select>
+      <label class="sr-only" for="leadSector">Settore merceologico</label>
+      <input id="leadSector" name="settore" required placeholder="Settore merceologico">
+     </div>
+     <div class="compact-fields">
+      <label class="sr-only" for="leadArea">Area geografica</label>
+      <input id="leadArea" name="area" required placeholder="Comuni, province o regioni">
+      <label class="sr-only" for="leadQuantity">Quantità indicativa</label>
+      <select id="leadQuantity" name="quantita" required aria-label="Quantità indicativa">
+       <option value="">Quantità indicativa</option><option>Fino a 2.000 contatti</option><option>3.000 contatti</option><option>5.000 contatti</option><option>10.000 contatti</option><option>20.000 contatti</option><option>25.000 contatti</option><option>Da definire in base alla copertura</option>
+      </select>
+     </div>
+     <div class="compact-fields">
       <label class="sr-only" for="bookDate">Data preferita</label>
       <input id="bookDate" name="data" type="date" aria-label="Data preferita, facoltativa">
       <label class="sr-only" for="bookTime">Orario preferito</label>
@@ -408,6 +424,10 @@
   const msg=[
    'RICHIESTA DAL SITO - LISTE MARKETING PROFILATE',
    'Tipo richiesta: '+(d.get('tipo')||'Informazioni'),
+   'Tipo di lista: '+(d.get('tipo_lista')||''),
+   'Settore merceologico: '+(d.get('settore')||''),
+   'Area geografica: '+(d.get('area')||''),
+   'Quantità indicativa: '+(d.get('quantita')||''),
    'Nome e cognome: '+(d.get('nome')||''),
    'Email: '+(d.get('email')||''),
    'Data preferita: '+(d.get('data')||'Da concordare'),
