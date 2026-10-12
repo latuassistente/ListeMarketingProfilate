@@ -113,6 +113,18 @@
  .navlinks a:not(.btn){display:inline-flex}
  .navlinks a.btn{padding:10px 14px;font-size:.84rem}
 }
+/* Menu leggibile: navigazione principale separata dalle informative */
+.header{background:#fff}
+.nav{width:min(100% - 40px,1440px);min-height:0;padding:16px 0 12px;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;column-gap:32px;row-gap:15px}
+.nav .brand{grid-column:1;grid-row:1;align-self:center;white-space:nowrap}
+.nav-mainlinks{grid-column:2;grid-row:1;display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;gap:10px 20px;min-width:0}
+.nav-mainlinks>a:not(.btn){display:inline-block;white-space:normal;line-height:1.35;font-size:.94rem;font-weight:650}
+.nav-mainlinks .btn{white-space:nowrap;padding:13px 18px;flex:0 0 auto}
+.nav-legal{grid-column:2;grid-row:2;display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px 20px;border-top:1px solid #e8edf4;padding-top:10px;font-size:.86rem;line-height:1.4}
+.nav-legal span{font-weight:750;color:#5b6575}
+.nav-legal a{font-weight:650;color:#174e8c;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:1180px){.nav{grid-template-columns:1fr;row-gap:13px}.nav .brand{grid-column:1;grid-row:1}.nav-mainlinks{grid-column:1;grid-row:2;justify-content:flex-start;gap:12px 20px}.nav-legal{grid-column:1;grid-row:3;justify-content:flex-start}}
+@media(max-width:600px){.nav{width:calc(100% - 28px);padding:14px 0;row-gap:12px}.nav-mainlinks{gap:12px 16px}.nav-mainlinks>a:not(.btn){font-size:.9rem}.nav-mainlinks .btn{width:100%;text-align:center;justify-content:center}.nav-legal{align-items:flex-start;flex-direction:column;gap:8px}.nav-legal span{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}}
 </style>
 <script type="application/ld+json">
 {
@@ -131,9 +143,15 @@
 </head>
 <body>
 <div class="topbar"><div class="wrap"><span>Liste di contatti per strategie commerciali più mirate</span><span>Informazioni: <a href="https://wa.me/393664424024?text=Buongiorno%2C%20vorrei%20informazioni%20sulle%20liste%20marketing%20profilate">WhatsApp 366 442 4024</a></span></div></div>
-<header class="header"><nav class="nav wrap" aria-label="Navigazione principale">
+<header class="header">
+<nav class="nav wrap" aria-label="Navigazione principale">
 <a class="brand" href="#home"><span class="brandmark">◎</span><span>LISTE MARKETING<small>PROFILATE</small></span></a>
-<div class="navlinks"><a href="#servizi">Servizi</a><a href="#metodo">Come funziona</a><a href="#prenota">Prenota una call</a><a href="#listino">Listino</a><a href="#pagamenti">Pagamenti</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy e Cookie</a><a href="ai-act.html">Intelligenza Artificiale e AI Act</a><a class="btn btn-dark" href="#contatti">Richiedi informazioni ↗</a></div>
+<div class="nav-mainlinks" aria-label="Sezioni del sito">
+<a href="#servizi">Servizi</a><a href="#metodo">Come funziona</a><a href="#prenota">Prenota una consulenza</a><a href="#listino">Listino prezzi</a><a href="#pagamenti">Metodi di pagamento</a><a href="#faq">Domande frequenti</a><a class="btn btn-dark" href="#contatti">Richiedi informazioni ↗</a>
+</div>
+<div class="nav-legal" aria-label="Informative e trasparenza">
+<span>Informazioni legali</span><a href="privacy.html">Informativa Privacy e Cookie</a><a href="ai-act.html">Trasparenza sull’Intelligenza Artificiale (AI Act)</a>
+</div>
 </nav></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid"><div>
