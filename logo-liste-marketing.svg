@@ -1,19 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 150" role="img" aria-labelledby="title desc">
-<title id="title">Liste Marketing Profilate</title><desc id="desc">Bersaglio navy e oro con profilo di pubblico, accanto al nome Liste Marketing Profilate.</desc>
-<rect width="620" height="150" fill="#fff"/>
-<g transform="translate(74 75)">
-<circle r="57" fill="none" stroke="#D99B19" stroke-width="7"/>
-<circle r="43" fill="none" stroke="#071B3B" stroke-width="6"/>
-<circle r="29" fill="none" stroke="#071B3B" stroke-width="5"/>
-<path d="M0-65V-49 M65 0H49 M0 65V49 M-65 0H-49" stroke="#D99B19" stroke-width="6" stroke-linecap="round"/>
-<circle cx="0" cy="-13" r="9" fill="#D99B19"/>
-<circle cx="-18" cy="-7" r="6" fill="#071B3B"/>
-<circle cx="18" cy="-7" r="6" fill="#071B3B"/>
-<path d="M-14 19V9C-14-1 14-1 14 9V27H-14Z" fill="#D99B19"/>
-<path d="M-29 17V10C-29 3-20 1-15 5 M29 17V10C29 3 20 1 15 5" fill="none" stroke="#071B3B" stroke-width="5" stroke-linecap="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+<title id="title">Liste Marketing Profilate</title><desc id="desc">Logo con bersaglio circolare navy e oro e simbolo di pubblico, con scritta Liste Marketing Profilate.</desc>
+<rect width="1200" height="400" fill="#fff"/>
+<defs><linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5d16a"/><stop offset=".48" stop-color="#d99b19"/><stop offset="1" stop-color="#a66b08"/></linearGradient></defs>
+<g transform="translate(200 200)">
+<circle r="145" fill="none" stroke="url(#gold)" stroke-width="17"/>
+<circle r="113" fill="none" stroke="#071B3B" stroke-width="17"/>
+<circle r="78" fill="none" stroke="#071B3B" stroke-width="13"/>
+<path d="M0-166V-132 M166 0H132 M0 166V132 M-166 0H-132" stroke="url(#gold)" stroke-width="17" stroke-linecap="round"/>
+<circle cx="0" cy="-30" r="27" fill="url(#gold)"/>
+<circle cx="-49" cy="-14" r="20" fill="#071B3B"/>
+<circle cx="49" cy="-14" r="20" fill="#071B3B"/>
+<path d="M-39 70V38C-39 2 39 2 39 38V88H-39Z" fill="url(#gold)"/>
+<path d="M-82 54V34C-82 11-56 5-42 20 M82 54V34C82 11 56 5 42 20" fill="none" stroke="#071B3B" stroke-width="15" stroke-linecap="round"/>
 </g>
-<path d="M155 22V128" stroke="#D99B19" stroke-width="2"/>
-<text x="183" y="65" font-family="Arial,Helvetica,sans-serif" font-size="37" font-weight="800" letter-spacing="-1.3" fill="#071B3B">LISTE MARKETING</text>
-<path d="M184 86H233 M570 86H612" stroke="#D99B19" stroke-width="2"/>
-<text x="245" y="94" font-family="Arial,Helvetica,sans-serif" font-size="20" font-weight="700" letter-spacing="5" fill="#B17B0D">PROFILATE</text>
+<path d="M390 55V345" stroke="url(#gold)" stroke-width="5"/>
+<text x="435" y="170" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="800" letter-spacing="-4" fill="#071B3B">LISTE</text>
+<text x="435" y="282" font-family="Arial,Helvetica,sans-serif" font-size="108" font-weight="800" letter-spacing="-5" fill="#071B3B">MARKETING</text>
+<path d="M440 323H550 M1012 323H1180" stroke="url(#gold)" stroke-width="5"/>
+<text x="580" y="344" font-family="Arial,Helvetica,sans-serif" font-size="44" font-weight="700" letter-spacing="12" fill="#B17B0D">PROFILATE</text>
 </svg>
