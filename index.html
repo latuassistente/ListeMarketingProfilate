@@ -94,6 +94,25 @@
 
 .gold-dash-label{display:flex;align-items:center;justify-content:center;gap:12px}
 .gold-dash-label::before,.gold-dash-label::after{content:"";display:inline-block;width:28px;height:3px;flex:0 0 28px;background:var(--gold);border-radius:4px}
+
+/* Navigazione principale: voci complete, leggibili e senza spezzature */
+.nav{width:min(100% - 40px,1680px);min-height:88px;gap:26px;justify-content:flex-start}
+.brand{flex:0 0 auto;white-space:nowrap}
+.navlinks{flex:1 1 auto;min-width:0;display:flex;flex-wrap:wrap;justify-content:flex-end;align-content:center;align-items:center;column-gap:clamp(12px,1.15vw,22px);row-gap:10px;font-size:clamp(.82rem,.88vw,.96rem)}
+.navlinks a{white-space:nowrap;line-height:1.25}
+.navlinks a.btn{flex:0 0 auto;padding:13px 20px}
+@media(max-width:1120px){
+ .nav{width:min(100% - 32px,1680px);padding:14px 0;align-items:flex-start;flex-wrap:wrap;gap:14px}
+ .navlinks{flex:1 1 100%;justify-content:flex-start;gap:10px 18px;font-size:.92rem}
+ .navlinks a:not(.btn){display:inline-flex}
+}
+@media(max-width:560px){
+ .nav{width:calc(100% - 28px);min-height:0;padding:12px 0;gap:12px}
+ .brand{font-size:.95rem}
+ .navlinks{display:flex;flex:1 1 100%;gap:8px 14px;font-size:.86rem}
+ .navlinks a:not(.btn){display:inline-flex}
+ .navlinks a.btn{padding:10px 14px;font-size:.84rem}
+}
 </style>
 <script type="application/ld+json">
 {
@@ -114,7 +133,7 @@
 <div class="topbar"><div class="wrap"><span>Liste di contatti per strategie commerciali più mirate</span><span>Informazioni: <a href="https://wa.me/393664424024?text=Buongiorno%2C%20vorrei%20informazioni%20sulle%20liste%20marketing%20profilate">WhatsApp 366 442 4024</a></span></div></div>
 <header class="header"><nav class="nav wrap" aria-label="Navigazione principale">
 <a class="brand" href="#home"><span class="brandmark">◎</span><span>LISTE MARKETING<small>PROFILATE</small></span></a>
-<div class="navlinks"><a href="#servizi">Servizi</a><a href="#metodo">Come funziona</a><a href="#prenota">Prenota una call</a><a href="#listino">Listino</a><a href="#pagamenti">Pagamenti</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy e Cookie</a><a href="ai-act.html">Trasparenza AI Act</a><a class="btn btn-dark" href="#contatti">Richiedi informazioni ↗</a></div>
+<div class="navlinks"><a href="#servizi">Servizi</a><a href="#metodo">Come funziona</a><a href="#prenota">Prenota una call</a><a href="#listino">Listino</a><a href="#pagamenti">Pagamenti</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy e Cookie</a><a href="ai-act.html">Intelligenza Artificiale e AI Act</a><a class="btn btn-dark" href="#contatti">Richiedi informazioni ↗</a></div>
 </nav></header>
 <main>
 <section class="hero" id="home"><div class="wrap hero-grid"><div>
