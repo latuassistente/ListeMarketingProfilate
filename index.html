@@ -409,72 +409,24 @@
 </script>
 
 
+
+
+
+
+
+
 <script>
+/* Unico gestore del modulo: apre WhatsApp con tutti i dati della richiesta. */
 (function(){
  const form=document.getElementById('bookingForm');
- if(form) form.addEventListener('submit',function(e){
-  e.preventDefault();
-  const data=new FormData(form);
-  const subject=encodeURIComponent('Richiesta informazioni / call - Liste Marketing Profilate');
-  const body=encodeURIComponent('Tipo di richiesta: '+data.get('tipo')+'\nNome: '+data.get('nome')+'\nEmail: '+data.get('email')+'\nData preferita: '+(data.get('data')||'Da concordare')+'\nOrario preferito: '+(data.get('orario')||'Da concordare')+'\nMessaggio: '+(data.get('messaggio')||'—'));
-  window.location.href='mailto:latuassistente@mail.com?subject='+subject+'&body='+body;
- });
- const save=document.getElementById('savePrivacy');
- if(save) save.addEventListener('click',function(){
-  const checked=document.getElementById('privacyPreference').checked;
-  const feedback=document.getElementById('privacyFeedback');
-  if(!checked){feedback.textContent='Seleziona la casella per salvare la preferenza.';return;}
-  try{localStorage.setItem('listeMarketingPrivacyPreference','viewed');feedback.textContent='Preferenza salvata su questo dispositivo. Questo non sostituisce l’informativa o un consenso legalmente richiesto.';}
-  catch(err){feedback.textContent='Non è stato possibile salvare la preferenza in questo browser.';}
- });
-})();
-</script>
-
-
-<script>
-(function(){
  const dateInput=document.getElementById('bookDate');
  if(dateInput){
    const today=new Date();
-   const localDate=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
-   dateInput.min=localDate;
+   dateInput.min=new Date(today.getTime()-today.getTimezoneOffset()*60000).toISOString().slice(0,10);
  }
- const form=document.getElementById('bookingForm');
  if(form) form.addEventListener('submit',function(e){
-   e.preventDefault();
-   const data=new FormData(form);
-   const subject=encodeURIComponent('Richiesta appuntamento - Liste Marketing Profilate');
-   const body=encodeURIComponent(
-    'Nome: '+data.get('nome')+'\\nEmail: '+data.get('email')+
-    '\\nTipo incontro: '+data.get('tipo')+'\\nData preferita: '+data.get('data')+
-    '\\nFascia oraria: '+data.get('orario')+'\\nMessaggio: '+(data.get('messaggio')||'—')
-   );
-   window.location.href='mailto:latuassistente@mail.com?subject='+subject+'&body='+body;
- });
- const save=document.getElementById('savePrivacy');
- if(save) save.addEventListener('click',function(){
-   const checked=document.getElementById('privacyPreference').checked;
-   const feedback=document.getElementById('privacyFeedback');
-   if(!checked){feedback.textContent='Seleziona la casella per salvare la preferenza.';return;}
-   try{
-    localStorage.setItem('listeMarketingPrivacyPreference','viewed');
-    feedback.textContent='Preferenza salvata su questo dispositivo. Questo non sostituisce l’informativa o un consenso legalmente richiesto.';
-   }catch(err){
-    feedback.textContent='Non è stato possibile salvare la preferenza in questo browser.';
-   }
- });
-})();
-</script>
-
-
-<script>
-/* Conversione diretta: invio del modulo tramite WhatsApp, senza dipendere da un client email configurato. */
-(function(){
- const form=document.getElementById('bookingForm');
- if(!form)return;
- form.addEventListener('submit',function(e){
   e.preventDefault();
-  e.stopImmediatePropagation();
+  if(!form.reportValidity()) return;
   const d=new FormData(form);
   const msg=[
    'RICHIESTA DAL SITO - LISTE MARKETING PROFILATE',
@@ -487,10 +439,20 @@
    'Email: '+(d.get('email')||''),
    'Data preferita: '+(d.get('data')||'Da concordare'),
    'Orario: '+(d.get('orario')||'Da concordare'),
-   'Settore / zona / quantità / dettagli: '+(d.get('messaggio')||'Da definire')
-  ].join('\n');
-  window.open('https://wa.me/393664424024?text='+encodeURIComponent(msg),'_blank','noopener,noreferrer');
- },true);
+   'Dettagli: '+(d.get('messaggio')||'Da definire')
+  ].join('\\n');
+  window.location.href='https://wa.me/393664424024?text='+encodeURIComponent(msg);
+ });
+ const save=document.getElementById('savePrivacy');
+ if(save) save.addEventListener('click',function(){
+  const checked=document.getElementById('privacyPreference').checked;
+  const feedback=document.getElementById('privacyFeedback');
+  if(!checked){feedback.textContent='Seleziona la casella per salvare la preferenza.';return;}
+  try{
+   localStorage.setItem('listeMarketingPrivacyPreference','viewed');
+   feedback.textContent='Preferenza salvata su questo dispositivo. Questo non sostituisce l’informativa o un consenso legalmente richiesto.';
+  }catch(err){feedback.textContent='Non è stato possibile salvare la preferenza in questo browser.';}
+ });
 })();
 </script>
 
