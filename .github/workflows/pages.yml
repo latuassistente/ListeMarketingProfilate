@@ -1,4 +1,5 @@
 name: Deploy static site to GitHub Pages
+# Trigger deployment after Pages was enabled
 
 on:
   push:
