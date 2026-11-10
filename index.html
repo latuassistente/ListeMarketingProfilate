@@ -337,18 +337,18 @@
    <h2>Paga con PayPal o carta.</h2>
    <p>Il pagamento viene gestito sulla pagina PayPal; il sito non raccoglie né memorizza i dati della carta.</p>
   </div>
+  <script src="https://www.paypal.com/sdk/js?client-id=BAAxE03RXtRoJ_-SNIE5BNkD8ntXxOOiIPNjDWHtkBX4vfch0WJ33jO_3kmRGaAfEpwg6Rv-SR9mIYd35s&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
   <div class="payment-options">
    <div class="payment-option">
     <div class="card-icon">P</div>
-    <h3>PayPal</h3>
-    <p>Apri la pagina di pagamento PayPal per completare il versamento.</p>
-    <a class="btn btn-dark" href="https://paypal.me/securepaymentme" target="_blank" rel="noopener noreferrer">Paga con PayPal ↗</a>
-   </div>
-   <div class="payment-option">
-    <div class="card-icon">▤</div>
-    <h3>Carte di credito e debito</h3>
-    <p>Puoi verificare nella pagina PayPal se è disponibile il pagamento con carta di credito o debito senza accedere a un account.</p>
-    <a class="btn btn-dark" href="https://paypal.me/securepaymentme" target="_blank" rel="noopener noreferrer">Paga con carta ↗</a>
+    <h3>PayPal e carte</h3>
+    <p>Paga con PayPal oppure inserisci direttamente i dati della tua carta, se il metodo è disponibile per il tuo pagamento.</p>
+    <div id="paypal-container-XUT9968Z729M8"></div>
+    <script>
+      paypal.HostedButtons({
+        hostedButtonId: "XUT9968Z729M8",
+      }).render("#paypal-container-XUT9968Z729M8")
+    </script>
    </div>
   </div>
   <div class="booking-panel" style="margin-top:18px">
